@@ -20,7 +20,7 @@
 */
 'use strict';
 
-import { requests } from 'https://javascript.homeinfo.de/requests.mjs';
+import { request } from 'https://javascript.homeinfo.de/requests.mjs';
 
 
 const URL = 'https://comcat.homeinfo.de/pwreset/confirm';
@@ -37,7 +37,7 @@ function getNonce () {
 
 
 function resetPassword () {
-    return requests.post(URL, {'nonce': getNonce()});
+    return request.post(URL, {'nonce': getNonce()});
 }
 
 
