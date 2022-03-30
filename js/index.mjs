@@ -42,7 +42,7 @@ function resetPassword () {
 
 
 function getMessage (response) {
-    if response.status != 200:
+    if (response.status != 200)
         return 'Ihr Passwort konnte leider nicht zurückgesetzt werden.';
 
     return 'Wir haben Ihnen Ihr neues Passwort per E-Mail zugesendet';
