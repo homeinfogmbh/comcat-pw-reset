@@ -56,5 +56,5 @@ function showMessage (response) {
 
 
 export function init () {
-    resetPassword().then(showMessage);
+    resetPassword().then(showMessage, showMessage);
 }
