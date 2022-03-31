@@ -40,20 +40,26 @@ function resetPassword () {
     return request.post(URL, {'nonce': getNonce()});
 }
 
+function closeWindow() {
+    window.close();
+}
+
+function addListener(btn) {
+    btn.addEventListener("click", closeWindow);
+}
 
 function getMessage (response) {
     if (response.status != 200)
         return 'Ihr Passwort konnte leider nicht zurückgesetzt werden.';
 
-    return 'Wir haben Ihnen Ihr neues Passwort per E-Mail zugesendet';
+    return 'Ihr Passwort wurde zurückgesetzt. Ein neues<br> Passwort haben wir Ihnen per E-Mail zugeschickt. <br>Bitte überprüfen Sie ihren Posteingang.';
 }
-
 
 function showMessage (response) {
     const messageContainer = document.getElementById('message');
-    messageContainer.textContent = getMessage(response);
+    messageContainer.innerHTML = getMessage(response);
+    addListener(document.getElementById('close'));
 }
-
 
 export function init () {
     resetPassword().then(showMessage, showMessage);

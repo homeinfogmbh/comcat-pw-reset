@@ -1,1 +1,53 @@
-/* Here be magic... */
+body {
+    background-color: #009fe3;
+    text-align:center;
+    font-family: Lato;
+}
+
+#subtitle {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color:white;
+    opacity: 0.8;
+}
+#title {
+    font-size: 26px;
+    font-weight: bold;
+    color:white;
+    margin-bottom: 5px;
+}
+#message {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color:white;
+    opacity: 0.8;
+}
+#close {
+    background-color: #fff;
+    width: 250px;
+    border: none;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 4px 2px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+hr {
+    border-top: 1px solid rgba(255, 255, 255, .8);;
+    width: 80px;
+    margin-bottom: 15px;
+}
+#content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  footer {
+      font-size: 12px;
+  }
