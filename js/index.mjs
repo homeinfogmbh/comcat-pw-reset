@@ -40,14 +40,6 @@ function resetPassword () {
     return request.post(URL, {'nonce': getNonce()});
 }
 
-function closeWindow() {
-    window.close();
-}
-
-function addListener(btn) {
-    btn.addEventListener("click", closeWindow);
-}
-
 function getMessage (response) {
     if (response.status != 200)
         return 'Ihr Passwort konnte leider nicht zurückgesetzt werden.';
@@ -58,7 +50,6 @@ function getMessage (response) {
 function showMessage (response) {
     const messageContainer = document.getElementById('message');
     messageContainer.innerHTML = getMessage(response);
-    addListener(document.getElementById('close'));
 }
 
 export function init () {

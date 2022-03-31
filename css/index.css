@@ -22,20 +22,6 @@ body {
     color:white;
     opacity: 0.8;
 }
-#close {
-    background-color: #fff;
-    width: 250px;
-    border: none;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    font-weight: bold;
-    margin: 4px 2px;
-    border-radius: 30px;
-    cursor: pointer;
-}
 hr {
     border-top: 1px solid rgba(255, 255, 255, .8);;
     width: 80px;
